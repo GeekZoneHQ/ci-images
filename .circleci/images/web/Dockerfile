@@ -14,7 +14,6 @@ RUN apt-get install python3-pip -y
 RUN apt-get install rabbitmq-server
 
 #Install requirements
-RUN wget https://raw.githubusercontent.com/GeekZoneHQ/web/master/requirements.txt
 RUN pip3 install -r requirements.txt
 
 #Run RabbitMQ
