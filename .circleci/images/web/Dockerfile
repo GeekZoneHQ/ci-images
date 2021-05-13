@@ -13,12 +13,9 @@ RUN apt-get install python3-pip -y
 #Install RabbitMQ
 RUN apt-get install rabbitmq-server
 
+#Copy requirements.txt into container
+COPY requirements.txt .
+
 #Install requirements
 RUN pip3 install -r requirements.txt
-
-#Run RabbitMQ
-RUN systemctl enable rabbitmq-server
-
-#Run a Celery worker
-RUN celery -A web worker
 
