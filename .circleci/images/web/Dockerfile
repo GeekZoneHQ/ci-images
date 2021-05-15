@@ -10,6 +10,9 @@ RUN apt-get update
 #Install pip
 RUN apt-get install python3-pip -y
 
+#Install PostgreSQL
+RUN apt-get -y install postgresql
+
 #Install RabbitMQ
 RUN apt-get install rabbitmq-server
 
@@ -18,4 +21,3 @@ COPY requirements.txt .
 
 #Install requirements
 RUN pip3 install -r requirements.txt
-
